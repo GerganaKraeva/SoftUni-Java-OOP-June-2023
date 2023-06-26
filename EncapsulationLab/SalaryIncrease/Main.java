@@ -1,4 +1,4 @@
-package SalaryIncrease;
+package salaryIncrease;
 
 import java.io.BufferedReader;
 import java.io.IOException;

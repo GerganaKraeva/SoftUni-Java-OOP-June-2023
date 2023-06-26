@@ -1,6 +1,4 @@
-package CardsWithPower;
-
-import CardRank.CardRanks;
+package cardsWithPower;
 
 public class Cards {
     RankPowers rankPowers;

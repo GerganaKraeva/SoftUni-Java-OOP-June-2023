@@ -1,4 +1,4 @@
-package CardRank;
+package cardRank;
 
 import java.util.Scanner;
 

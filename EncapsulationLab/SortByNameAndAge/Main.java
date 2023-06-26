@@ -1,4 +1,4 @@
-package SortByNameAndAge;
+package sortByNameAndAge;
 
 import java.io.BufferedReader;
 import java.io.IOException;

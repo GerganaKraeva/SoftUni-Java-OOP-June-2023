@@ -1,4 +1,4 @@
-package SalaryIncrease;
+package salaryIncrease;
 
 import java.text.DecimalFormat;
 

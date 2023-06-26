@@ -1,4 +1,4 @@
-package FirstAndReserveTeam;
+package firstAndReserveTeam;
 
 import java.text.DecimalFormat;
 

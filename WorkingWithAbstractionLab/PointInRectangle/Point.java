@@ -1,5 +1,5 @@
 
-package PointInRectangle;
+package pointInRectangle;
 
 public class Point {
     private int x;

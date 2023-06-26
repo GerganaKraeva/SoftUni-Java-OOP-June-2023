@@ -1,4 +1,4 @@
-package TrafficLights;
+package trafficLights;
 
 public class TrafficLight {
     private Color color;

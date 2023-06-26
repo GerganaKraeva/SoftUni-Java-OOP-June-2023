@@ -1,4 +1,4 @@
-package ValidationData;
+package validationData;
 
 import java.text.DecimalFormat;
 

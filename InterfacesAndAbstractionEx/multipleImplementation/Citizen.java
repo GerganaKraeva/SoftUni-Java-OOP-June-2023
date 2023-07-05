@@ -1,36 +1,36 @@
-package birthdayCelebrations;
+package multipleImplementation;
 
-public class Citizen implements Person, Birthable,Identifiable {
+public class Citizen implements Person,Birthable,Identifiable {
     private String name;
     private  int age;
     private String id;
-    private String birthDate;
+    private String birthday;
 
-    public Citizen(String name, int age, String id, String birthDate) {
+    public Citizen(String name, int age, String id, String birthday) {
         this.name = name;
         this.age = age;
         this.id = id;
-        this.birthDate = birthDate;
+        this.birthday = birthday;
     }
 
     @Override
     public String getName() {
-        return this.name;
+        return name;
     }
 
     @Override
     public int getAge() {
-        return this.age;
+        return age;
     }
 
     @Override
     public String getBirthDate() {
-        return birthDate;
+        return birthday;
     }
-
 
     @Override
     public String getId() {
-        return this.id;
+        return id;
     }
+    
 }

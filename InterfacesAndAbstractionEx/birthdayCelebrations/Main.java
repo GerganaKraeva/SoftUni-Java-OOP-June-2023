@@ -1,9 +1,6 @@
 package birthdayCelebrations;
 
-import multipleImplementation.Person;
-
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -25,7 +22,7 @@ public class Main {
                 birthableList.add(birthable);
             }else if(data.length==3){
                 if(data[0].equals("Pet")){
-                    birthable=new Pets(data[1],data[2]);
+                    birthable=new Pet(data[1],data[2]);
                     birthableList.add(birthable);
                 }
             }

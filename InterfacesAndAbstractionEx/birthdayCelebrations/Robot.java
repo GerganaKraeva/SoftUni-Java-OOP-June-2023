@@ -10,12 +10,12 @@ private String model;
     }
 
     public String getModel() {
-        return model;
+        return this.model;
     }
 
     @Override
     public String getId() {
-        return null;
+        return this.id;
     }
 
 }

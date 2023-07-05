@@ -29,21 +29,16 @@ public class Main {
             command=scanner.nextLine();
         }
         String year=scanner.nextLine();
-        List<String>result=new ArrayList<>();
-        if(!birthableList.isEmpty()) {
+
             birthableList.stream()
                     .map(Birthable::getBirthDate)
-                    .forEach(e -> {
-                        String[] data = e.split("\\/");
-                        if (Integer.parseInt(data[2]) == Integer.parseInt(year)) {
-                            result.add(e);
-                        }
-                    });
-        }
-        if(result.isEmpty()){
-            System.out.println("<no output>");
-        }else{
-            System.out.println(String.join(System.lineSeparator(),result));
+                    .filter(e -> e.endsWith(year))
+                    .forEach(System.out::println);
+
+//        for (Birthable birthable : birthableList) {
+//            if(birthable.getBirthDate().endsWith(year)){
+//                System.out.println(birthable.getBirthDate());
+//            }
         }
     }
 }

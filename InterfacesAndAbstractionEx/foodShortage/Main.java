@@ -22,8 +22,8 @@ public class Main {
                 String name = info[0];
                 int age = Integer.parseInt(info[1]);
                 String group = info[2];
-                Rebel rebel = new Rebel(name, age, group);
-                people.put(name, rebel);
+                Buyer buyer= new Rebel(name, age, group);
+                people.put(name, buyer );
             }
         }
         String command = scanner.nextLine();

@@ -1,24 +1,18 @@
 package vehicles;
-
 import java.text.DecimalFormat;
 
 public abstract class VehiclesImpl implements Vehicles {
     private double fuelQuantity;
     private double consumption;
 
-    public void setFuelQuantity(double fuelQuantity) {
+    protected VehiclesImpl(double fuelQuantity, double consumption) {
         this.fuelQuantity = fuelQuantity;
+        this.setConsumption(consumption);
     }
 
     public void setConsumption(double consumption) {
         this.consumption = consumption;
     }
-
-    protected VehiclesImpl(double fuelQuantity, double consumption) {
-        this.setFuelQuantity(fuelQuantity);
-        this.setConsumption(consumption);
-    }
-
 
     @Override
     public String drive(double distance) {
@@ -37,12 +31,12 @@ public abstract class VehiclesImpl implements Vehicles {
 
     @Override
     public void refuel(Double liters) {
-        this.fuelQuantity+=liters;
+        this.fuelQuantity += liters;
     }
 
     @Override
     public String toString() {
-        return String.format("%s: %.2f ",this.getClass().getSimpleName(),
+        return String.format("%s: %.2f ", this.getClass().getSimpleName(),
                 this.fuelQuantity);
     }
 }

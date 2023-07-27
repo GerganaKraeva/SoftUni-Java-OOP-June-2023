@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8b86f414-d4ae-40b6-bb98-2680bd7fcdc7" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2T7nqeOTPIxBIT4cvIGYXAlg96h" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/gerga/Java GitHub/SoftUni-Java-OOP-June-2023/ExamPrep/3.04.23/MagicGameApp-Skeleton/MagicGameApp"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.MagicianTests.testTakeDamageWhenMagicianIsDead">
+    <configuration name="MagicianTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UnitTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="magicGame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="magicGame" />
+      <option name="MAIN_CLASS_NAME" value="magicGame.MagicianTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MagicianTests.testGetMagicWhenExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UnitTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="magicGame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="magicGame" />
+      <option name="MAIN_CLASS_NAME" value="magicGame.MagicianTests" />
+      <option name="METHOD_NAME" value="testGetMagicWhenExist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MagicianTests.testRemoveMagic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UnitTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="magicGame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="magicGame" />
+      <option name="MAIN_CLASS_NAME" value="magicGame.MagicianTests" />
+      <option name="METHOD_NAME" value="testRemoveMagic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MagicianTests.testTakeDamage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UnitTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="magicGame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="magicGame" />
+      <option name="MAIN_CLASS_NAME" value="magicGame.MagicianTests" />
+      <option name="METHOD_NAME" value="testTakeDamage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MagicianTests.testTakeDamageWhenMagicianIsDead" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UnitTesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="magicGame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="magicGame" />
+      <option name="MAIN_CLASS_NAME" value="magicGame.MagicianTests" />
+      <option name="METHOD_NAME" value="testTakeDamageWhenMagicianIsDead" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MagicianTests.testTakeDamageWhenMagicianIsDead" />
+        <item itemvalue="JUnit.MagicianTests.testTakeDamage" />
+        <item itemvalue="JUnit.MagicianTests.testGetMagicWhenExist" />
+        <item itemvalue="JUnit.MagicianTests" />
+        <item itemvalue="JUnit.MagicianTests.testRemoveMagic" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8b86f414-d4ae-40b6-bb98-2680bd7fcdc7" name="Changes" comment="" />
+      <created>1690403179317</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690403179317</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/UnitTesting$MagicianTests_testRemoveMagicWhenExist.ic" NAME="MagicianTests.testRemoveMagicWhenExist Coverage Results" MODIFIED="1690406044862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>magicGame.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UnitTesting$MagicianTests_testMagicianThrowsExceptionWhenHealthNegative.ic" NAME="MagicianTests.testMagicianThrowsExceptionWhenHealthNegative Coverage Results" MODIFIED="1690406954272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>magicGame.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UnitTesting$MagicianTests_testTakeDamage.ic" NAME="MagicianTests.testTakeDamage Coverage Results" MODIFIED="1690409916011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>magicGame.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UnitTesting$MagicianTests_testConstructorWhenMagicianNameNullThrowsException.ic" NAME="MagicianTests.testConstructorWhenMagicianNameNullThrowsException Coverage Results" MODIFIED="1690404119218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>magicGame.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UnitTesting$MagicianTests.ic" NAME="MagicianTests Coverage Results" MODIFIED="1690409622348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>magicGame.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UnitTesting$MagicianTests_testTakeDamageWhenMagicianIsDead.ic" NAME="MagicianTests.testTakeDamageWhenMagicianIsDead Coverage Results" MODIFIED="1690409984800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>magicGame.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UnitTesting$MagicianTests_testConstructorCreateMagician.ic" NAME="MagicianTests.testConstructorCreateMagician Coverage Results" MODIFIED="1690403952677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>magicGame.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UnitTesting$MagicianTests_testAddMagicToMagician.ic" NAME="MagicianTests.testAddMagicToMagician Coverage Results" MODIFIED="1690405717214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>magicGame.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UnitTesting$MagicianTests_testGetMagicWhenExist.ic" NAME="MagicianTests.testGetMagicWhenExist Coverage Results" MODIFIED="1690409841952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>magicGame.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UnitTesting$MagicianTests_testIfMagicianIsDeadBeforeTakeDamage.ic" NAME="MagicianTests.testIfMagicianIsDeadBeforeTakeDamage Coverage Results" MODIFIED="1690407475123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>magicGame.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UnitTesting$MagicianTests_testAddMagicThrowsExceptionWhenNull.ic" NAME="MagicianTests.testAddMagicThrowsExceptionWhenNull Coverage Results" MODIFIED="1690405676504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>magicGame.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UnitTesting$MagicianTests_testRemoveMagic.ic" NAME="MagicianTests.testRemoveMagic Coverage Results" MODIFIED="1690409576305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>magicGame.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/UnitTesting$MagicianTests_testTakeDamageBiggerThanHealthReturnsZeroHealth.ic" NAME="MagicianTests.testTakeDamageBiggerThanHealthReturnsZeroHealth Coverage Results" MODIFIED="1690405022321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>magicGame.*</FILTER>
+    </SUITE>
+  </component>
+</project>

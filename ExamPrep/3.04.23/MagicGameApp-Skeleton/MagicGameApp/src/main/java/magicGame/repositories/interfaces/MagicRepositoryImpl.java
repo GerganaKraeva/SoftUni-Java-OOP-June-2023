@@ -3,10 +3,15 @@ package magicGame.repositories.interfaces;
 import magicGame.models.magics.Magic;
 
 import java.util.Collection;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class MagicRepositoryImpl implements MagicRepository<Magic> {
     private Map<String,Magic> data;
+
+    public MagicRepositoryImpl() {
+        this.data=new LinkedHashMap<>();
+    }
 
     @Override
     public Collection<Magic> getData() {
@@ -25,6 +30,6 @@ public class MagicRepositoryImpl implements MagicRepository<Magic> {
 
     @Override
     public Magic findByName(String name) {
-        return data.remove(name);
+        return data.get(name);
     }
 }

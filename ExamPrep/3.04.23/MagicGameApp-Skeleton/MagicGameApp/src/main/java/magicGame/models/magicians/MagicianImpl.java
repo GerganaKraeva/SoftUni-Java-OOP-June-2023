@@ -57,14 +57,18 @@ public abstract class MagicianImpl implements Magician {
 
     @Override
     public boolean isAlive() {
-        return getHealth()<0;
+        return getHealth()>0;
     }
 
     @Override
     public void takeDamage(int points) {
         protection -=points;
         if(protection<=0){
+            protection=0;
             health+=protection;
+            if(health<=0){
+                isAlive=false;
+            }
         }
     }
 }

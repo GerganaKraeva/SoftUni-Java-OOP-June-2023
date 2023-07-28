@@ -3,10 +3,16 @@ package magicGame.repositories.interfaces;
 import magicGame.models.magicians.Magician;
 
 import java.util.Collection;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class MagicianRepositoryImpl implements MagicianRepository<Magician>{
     private Map<String,Magician> data;
+
+    public MagicianRepositoryImpl() {
+        this.data=new LinkedHashMap<>();
+    }
+
     @Override
     public Collection<Magician> getData() {
         return data.values();

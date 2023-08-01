@@ -28,10 +28,6 @@ public abstract class BaseAnimal implements Animal{
         this.name = name;
     }
 
-    public String getKind() {
-        return kind;
-    }
-
     private void setKind(String kind) {
         if(kind==null || kind.trim().isEmpty()) {
             throw new NullPointerException(ANIMAL_KIND_NULL_OR_EMPTY);
@@ -53,11 +49,10 @@ public abstract class BaseAnimal implements Animal{
         return price;
     }
 
-    public void setPrice(double price) {
-            if(price<=0){
-                throw new IllegalArgumentException(ANIMAL_PRICE_BELOW_OR_EQUAL_ZERO);
-            }
-            this.price = price;
+    private void setPrice(double price) {
+        if(price<=0.0){
+            throw new IllegalArgumentException(ANIMAL_PRICE_BELOW_OR_EQUAL_ZERO);
         }
-
+        this.price = price;
+    }
 }

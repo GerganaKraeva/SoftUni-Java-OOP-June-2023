@@ -21,7 +21,7 @@ import static zoo.common.ExceptionMessages.*;
 
 public class ControllerImpl implements Controller {
     private FoodRepository foodRepository;
-    private Map<String, Area> areas ;
+    private Map<String, Area> areas;
 
     public ControllerImpl() {
         this.foodRepository = new FoodRepositoryImpl();
@@ -36,7 +36,7 @@ public class ControllerImpl implements Controller {
         } else if ("WaterArea".equals(areaType)) {
             area = new WaterArea(areaName);
         } else {
-            throw new IllegalArgumentException(INVALID_AREA_TYPE);
+            throw new NullPointerException(INVALID_AREA_TYPE);
         }
         areas.put(areaName, area);
         return String.format(SUCCESSFULLY_ADDED_AREA_TYPE, areaType);
@@ -50,7 +50,7 @@ public class ControllerImpl implements Controller {
         } else if ("Vegetable".equals(foodType)) {
             food = new Vegetable();
         } else {
-            throw new NullPointerException(INVALID_FOOD_TYPE);
+            throw new IllegalArgumentException(INVALID_FOOD_TYPE);
         }
         foodRepository.add(food);
         return String.format(SUCCESSFULLY_ADDED_FOOD_TYPE, foodType);
@@ -80,19 +80,20 @@ public class ControllerImpl implements Controller {
         } else {
             throw new IllegalArgumentException(INVALID_ANIMAL_TYPE);
         }
+        Area area = areas.get(areaName);
 
-        Area area=areas.get(areaName);
-        String areaType=area.getClass().getSimpleName();
+        String areaType = area.getClass().getSimpleName();
 
-        Boolean areaAndAnimalAreLandBased="LandArea".equals(areaType) && "TerrestrialAnimal".equals(animalType);
-        Boolean areaAndAnimalAreWaterBased="WaterArea".equals(areaType) && "AquaticAnimal".equals(animalType);
-
-        if(areaAndAnimalAreLandBased || areaAndAnimalAreWaterBased){
+        Boolean areaAndAnimalAreLandBased = "LandArea".equals(areaType) && "TerrestrialAnimal".equals(animalType);
+        Boolean areaAndAnimalAreWaterBased = "WaterArea".equals(areaType) && "AquaticAnimal".equals(animalType);
+        String output;
+        if (areaAndAnimalAreLandBased || areaAndAnimalAreWaterBased) {
             area.addAnimal(animal);
-        }else{
-            return AREA_NOT_SUITABLE;
+            output = String.format(SUCCESSFULLY_ADDED_ANIMAL_IN_AREA, animalType, areaName);
+        } else {
+            throw new IllegalArgumentException(AREA_NOT_SUITABLE);
         }
-        return String.format(SUCCESSFULLY_ADDED_AREA_TYPE,animalType);
+        return output;
 
     }
 
@@ -106,14 +107,14 @@ public class ControllerImpl implements Controller {
 
     @Override
     public String calculateKg(String areaName) {
-        Collection <Animal> animals = areas.get(areaName).getAnimals();
-        double calculateKg= animals.stream().mapToDouble(Animal::getKg).sum();
-        return String.format(KILOGRAMS_AREA,areaName,calculateKg);
+        Collection<Animal> animals = areas.get(areaName).getAnimals();
+        double calculateKg = animals.stream().mapToDouble(Animal::getKg).sum();
+        return String.format(KILOGRAMS_AREA, areaName, calculateKg);
     }
 
     @Override
     public String getStatistics() {
-      return   areas.values().stream()
+        return areas.values().stream()
                 .map(Area::getInfo)
                 .collect(Collectors.joining(System.lineSeparator()));
     }

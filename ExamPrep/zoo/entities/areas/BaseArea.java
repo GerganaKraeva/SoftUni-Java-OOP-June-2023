@@ -28,7 +28,7 @@ public abstract class BaseArea implements Area {
         return name;
     }
 
-    private void setName(String name) {
+    protected void setName(String name) {
         if (name == null || name.trim().isEmpty()) {
             throw new NullPointerException(AREA_NAME_NULL_OR_EMPTY);
         }
@@ -73,7 +73,6 @@ public abstract class BaseArea implements Area {
     @Override
     public void feed() {
         animals.forEach(Animal::eat);
-
     }
 
     @Override
@@ -85,18 +84,19 @@ public abstract class BaseArea implements Area {
                 .map(Animal::getName)
                 .collect(Collectors.joining(" "));
 
-//        StringBuilder sb=new StringBuilder();
-//        sb.append(String.format("%s (%s):",name,this.getClass().getSimpleName())).append(System.lineSeparator());
-//        sb.append(String.format("Animals: %s",result)).append(System.lineSeparator());
-//        sb.append(String.format("Foods: %d",foods.size())).append(System.lineSeparator());
-//        sb.append(String.format("Calories: %d",sumCalories())).append(System.lineSeparator());
-
        return String.format("%s (%s):%n"+
                 "Animals: %s%n"+
                 "Foods: %d%n"+
                 "Calories: %d",name,this.getClass().getSimpleName(),result,foods.size(),sumCalories());
 
-//        return sb.toString().trim();
+
     }
 
+    public int getCapacity() {
+        return animals.size();
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
 }

@@ -49,7 +49,7 @@ public class ControllerImpl implements Controller {
         } else if ("Mouse".equals(type)) {
             toy = new Mouse();
         } else {
-            throw new IllegalStateException(INVALID_TOY_TYPE);
+            throw new IllegalArgumentException(INVALID_TOY_TYPE);
         }
         toys.buyToy(toy);
         return String.format(SUCCESSFULLY_ADDED_TOY_TYPE, type);

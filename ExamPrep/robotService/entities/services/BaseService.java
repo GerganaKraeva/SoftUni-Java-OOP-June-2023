@@ -5,6 +5,7 @@ import robotService.entities.supplements.Supplement;
 
 import java.util.ArrayList;
 import java.util.Collection;
+
 import java.util.stream.Collectors;
 
 import static robotService.common.ConstantMessages.*;
@@ -25,7 +26,7 @@ public abstract class BaseService implements Service {
 
     @Override
     public String getName() {
-        return name;
+        return this.name;
     }
 
     @Override
@@ -34,6 +35,14 @@ public abstract class BaseService implements Service {
             throw new NullPointerException(SERVICE_NAME_CANNOT_BE_NULL_OR_EMPTY);
         }
         this.name = name;
+    }
+
+    public int getCapacity() {
+        return robots.size();
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
     }
 
     @Override
@@ -48,15 +57,15 @@ public abstract class BaseService implements Service {
 
     @Override
     public void addRobot(Robot robot) {
-        if (robots.size() == this.capacity) {
+        if (this.robots.size() == this.capacity) {
             throw new IllegalStateException(NOT_ENOUGH_CAPACITY_FOR_ROBOT);
         }
-        robots.add(robot);
+        this.robots.add(robot);
     }
 
     @Override
     public void removeRobot(Robot robot) {
-        robots.remove(robot);
+       this.robots.remove(robot);
     }
 
     @Override
@@ -71,7 +80,6 @@ public abstract class BaseService implements Service {
 
     @Override
     public int sumHardness() {
-
         return supplements.stream()
                 .mapToInt(Supplement::getHardness)
                 .sum();

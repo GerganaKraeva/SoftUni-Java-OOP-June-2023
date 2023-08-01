@@ -44,7 +44,7 @@ public abstract class BaseRobot implements Robot{
         return kilograms;
     }
 
-    public void setKilograms(int kilograms) {
+    protected void setKilograms(int kilograms) {
         this.kilograms = kilograms;
     }
 
@@ -53,10 +53,13 @@ public abstract class BaseRobot implements Robot{
         return price;
     }
 
-    public void setPrice(double price) {
+    protected void setPrice(double price) {
         if(price<=0) {
             throw new IllegalArgumentException(ROBOT_PRICE_CANNOT_BE_BELOW_OR_EQUAL_TO_ZERO);
         }
         this.price = price;
     }
+
+    @Override
+    public abstract void eating();
 }

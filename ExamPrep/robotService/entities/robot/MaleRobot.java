@@ -12,6 +12,6 @@ public class MaleRobot extends BaseRobot{
     public void eating() {
         int currentKg=getKilograms();
         int increaseKg=3;
-        setKilograms(currentKg+increaseKg);
+        super.setKilograms(currentKg+increaseKg);
     }
 }

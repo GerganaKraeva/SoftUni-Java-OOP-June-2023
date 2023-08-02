@@ -1,5 +1,6 @@
 package goldDigger.models.discoverer;
 
+
 import goldDigger.models.museum.BaseMuseum;
 import goldDigger.models.museum.Museum;
 
@@ -15,7 +16,7 @@ public abstract class BaseDiscoverer implements Discoverer {
     protected BaseDiscoverer(String name, double energy) {
         this.setName(name);
         this.setEnergy(energy);
-        this.museum = getMuseum();
+        this.museum =new BaseMuseum();
     }
 
     @Override
@@ -45,11 +46,10 @@ public abstract class BaseDiscoverer implements Discoverer {
     @Override
     public void dig() {
         double newEnergy = getEnergy() - ENERGY_COST_OF_DIGGING;
-        if (getEnergy() < 0) {
-            setEnergy(0);
+        if (newEnergy < 0) {
+           newEnergy=0;
         }
         setEnergy(newEnergy);
-//        energy= Math.max(0,energy-ENERGY_COST_OF_DIGGING);
     }
 
     @Override

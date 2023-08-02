@@ -7,7 +7,6 @@ import java.util.*;
 public class SpotRepository implements Repository<Spot> {
     private Map<String, Spot> spots;
 
-
     public SpotRepository() {
         spots = new LinkedHashMap<>();
     }

@@ -6,7 +6,6 @@ import goldDigger.models.operation.OperationImpl;
 import goldDigger.models.spot.Spot;
 import goldDigger.models.spot.SpotImpl;
 import goldDigger.repositories.DiscovererRepository;
-import goldDigger.repositories.Repository;
 import goldDigger.repositories.SpotRepository;
 
 import java.util.Collection;
@@ -17,13 +16,14 @@ import static goldDigger.common.ConstantMessages.*;
 import static goldDigger.common.ExceptionMessages.*;
 
 public class ControllerImpl implements Controller {
-    private Repository<Discoverer> discovererRepository;
-    private Repository<Spot> spotRepository;
+    private DiscovererRepository discovererRepository;
+    private SpotRepository spotRepository;
     private int count;
 
     public ControllerImpl() {
         this.discovererRepository = new DiscovererRepository();
         this.spotRepository = new SpotRepository();
+        this.count=0;
     }
 
     @Override
@@ -48,6 +48,7 @@ public class ControllerImpl implements Controller {
         for (String exhibitToAdd : exhibitsToAdd) {
             spot.getExhibits().add(exhibitToAdd);
         }
+
         spotRepository.add(spot);
         return String.format(SPOT_ADDED, spotName);
     }
@@ -81,7 +82,7 @@ public class ControllerImpl implements Controller {
                 .filter(d -> d.getEnergy() == 0)
                 .count();
         count++;
-        return String.format(INSPECT_SPOT, spotName,tiresDiscoverers);
+        return String.format(INSPECT_SPOT, spotName, tiresDiscoverers);
     }
 
     @Override
@@ -97,7 +98,7 @@ public class ControllerImpl implements Controller {
             if (discovererExhibits.isEmpty()) {
                 sb.append(String.format(FINAL_DISCOVERER_MUSEUM_EXHIBITS, "None")).append(System.lineSeparator());
             } else {
-                String allMuseumExhibits = String.join( FINAL_DISCOVERER_MUSEUM_EXHIBITS_DELIMITER, discoverer.getMuseum().getExhibits());
+                String allMuseumExhibits = String.join(FINAL_DISCOVERER_MUSEUM_EXHIBITS_DELIMITER, discovererExhibits);
                 sb.append(String.format(FINAL_DISCOVERER_MUSEUM_EXHIBITS, allMuseumExhibits)).append(System.lineSeparator());
             }
         }

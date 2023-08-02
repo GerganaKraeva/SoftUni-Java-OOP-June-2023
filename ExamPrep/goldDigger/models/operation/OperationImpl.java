@@ -10,16 +10,13 @@ public class OperationImpl implements Operation {
 
     @Override
     public void startOperation(Spot spot, Collection<Discoverer> discoverers) {
-        //take discoverer
-        //take exhibit
-        //remove exhibit,add in museum of discoverer
-        Collection<String> exhibits = spot.getExhibits();
+        Collection<String> exhibitsInSpot = spot.getExhibits();
         for (Discoverer discoverer : discoverers) {
-            while (discoverer.canDig() && exhibits.iterator().hasNext()) {
+            while (discoverer.canDig() && exhibitsInSpot.iterator().hasNext()) {
                 discoverer.dig();
-                String currentExhibit = exhibits.iterator().next();
-                discoverer.getMuseum().getExhibits();
-                exhibits.remove(currentExhibit);
+                String currentExhibit = exhibitsInSpot.iterator().next();
+                discoverer.getMuseum().getExhibits().add(currentExhibit);
+                exhibitsInSpot.remove(currentExhibit);
             }
         }
 

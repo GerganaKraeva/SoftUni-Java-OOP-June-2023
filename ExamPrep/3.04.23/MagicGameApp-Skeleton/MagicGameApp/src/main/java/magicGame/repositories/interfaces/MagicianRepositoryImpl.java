@@ -3,8 +3,11 @@ package magicGame.repositories.interfaces;
 import magicGame.models.magicians.Magician;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
+
+import static magicGame.common.ExceptionMessages.*;
 
 public class MagicianRepositoryImpl implements MagicianRepository<Magician>{
     private Map<String,Magician> data;
@@ -20,6 +23,9 @@ public class MagicianRepositoryImpl implements MagicianRepository<Magician>{
 
     @Override
     public void addMagician(Magician model) {
+        if(model==null) {
+            throw new NullPointerException(INVALID_MAGICIAN_REPOSITORY);
+        }
         data.put(model.getUsername(),model);
 
     }

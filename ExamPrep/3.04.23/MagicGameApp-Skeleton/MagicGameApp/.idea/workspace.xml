@@ -40,7 +40,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/gerga/Java GitHub/SoftUni-Java-OOP-June-2023/ExamPrep/14august22/secondTask/football"
+    "last_opened_file_path": "C:/Users/gerga/IdeaProjects/geri/OOP/Tasks/ExamPeparation/MAGIC"
   }
 }]]></component>
   <component name="RunManager">
@@ -84,5 +84,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/magicGame/core/ControllerImpl.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

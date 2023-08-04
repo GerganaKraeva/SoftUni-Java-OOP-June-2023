@@ -14,10 +14,9 @@ public abstract class MagicianImpl implements Magician {
 
     protected MagicianImpl(String username, int health, int protection, Magic magic) {
         this.setUsername(username);
-        this.health = health;
-        this.protection = protection;
-        this.magic = magic;
-    }
+        this.setHealth(health);
+        this.setProtection(protection);;
+        this.magic =magic;   }
 
     @Override
     public String getUsername() {
@@ -33,26 +32,40 @@ public abstract class MagicianImpl implements Magician {
 
     @Override
     public int getHealth() {
+
+        return health;
+    }
+    protected void setHealth(int health) {
         if(health<0) {
             throw new IllegalArgumentException(INVALID_MAGICIAN_HEALTH);
         }
-        return health;
+        this.health = health;
+
     }
 
     @Override
     public int getProtection() {
+        return protection;
+    }
+
+
+    protected void setProtection(int protection) {
         if(protection<0) {
             throw new IllegalArgumentException(INVALID_MAGICIAN_PROTECTION);
         }
-        return protection;
+        this.protection = protection;
     }
 
     @Override
     public Magic getMagic() {
+        return magic;
+    }
+
+    protected void setMagic(Magic magic) {
         if(magic==null) {
             throw new NullPointerException(INVALID_MAGIC);
         }
-        return magic;
+        this.magic = magic;
     }
 
     @Override
@@ -60,15 +73,33 @@ public abstract class MagicianImpl implements Magician {
         return getHealth()>0;
     }
 
+    public void setAlive(boolean alive) {
+        isAlive = alive;
+    }
+
     @Override
     public void takeDamage(int points) {
-        protection -=points;
-        if(protection<=0){
-            protection=0;
-            health+=protection;
+        int currentProtection =protection-points;
+        if(currentProtection<0){
+            setProtection(0);
+            health+=currentProtection;
             if(health<=0){
-                isAlive=false;
+                setHealth(0);
+                setAlive(false);
             }
         }
+    }
+
+    @Override
+    public String toString() {
+
+
+        return String.format("%s: %s%n"+
+                "Health: %d%n"+
+                "Protection: %d%n"+
+                "Magic: %s",getClass().getSimpleName(),username,
+                health,
+                protection,
+                magic.getName());
     }
 }

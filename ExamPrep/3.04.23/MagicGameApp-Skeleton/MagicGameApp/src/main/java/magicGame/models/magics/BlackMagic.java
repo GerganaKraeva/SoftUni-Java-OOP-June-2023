@@ -11,8 +11,9 @@ public class BlackMagic extends MagicImpl {
     public int fire() {
         int currentBullets=getBulletsCount()-FIRE_BULLETS_COUNT;
         if(currentBullets<0){
-            return 0;
+            currentBullets=0;
         }
-        return FIRE_BULLETS_COUNT;
+        setBulletsCount(currentBullets);
+        return getBulletsCount();
     }
 }

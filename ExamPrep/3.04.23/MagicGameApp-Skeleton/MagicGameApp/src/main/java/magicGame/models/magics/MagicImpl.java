@@ -9,7 +9,7 @@ public abstract class MagicImpl implements Magic {
 
     protected MagicImpl(String name, int bulletsCount) {
         this.setName(name);
-        this.bulletsCount = bulletsCount;
+        this.setBulletsCount(bulletsCount);
     }
 
     @Override
@@ -29,11 +29,15 @@ public abstract class MagicImpl implements Magic {
         return bulletsCount;
     }
 
-    public void setBulletsCount(int bulletsCount) {
+    protected void setBulletsCount(int bulletsCount) {
         if(bulletsCount<0){
             throw new IllegalArgumentException(INVALID_MAGIC_BULLETS_COUNT );
         }
         this.bulletsCount = bulletsCount;
     }
 
+    @Override
+    public int fire() {
+        return bulletsCount;
+    }
 }

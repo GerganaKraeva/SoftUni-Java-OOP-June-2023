@@ -36,8 +36,8 @@ public class RegionImpl implements Region {
             }
         }
         if (blackWidow.isEmpty()) {
-            return "Black widows win";
+            return "Wizards win!";
         }
-        return "Wizards win";
+        return "Black widows win!";
     }
 }
